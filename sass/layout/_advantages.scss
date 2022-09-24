@@ -1,0 +1,37 @@
+.advantages-section {
+  padding-top: 94px;
+}
+.feature {
+  display: flex;
+  gap: 30px;
+}
+
+.feature__item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+.feature__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feature__descr {
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+
+.feature__card {
+  @extend %align;
+  height: 120px;
+  background-color: var(--team-section-bgc);
+  margin-bottom: 30px;
+  border-radius: 4px;
+  transition: box-shadow var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
