@@ -189,11 +189,54 @@
           <ul class="team-list list">
             <li class="team-list__item">
               <div class="team-member">
-                <img
-                  src="./images/img.jpg"
-                  alt="чоловік у коричневій сорочці"
-                  width="270"
-                  height="260" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team-desktop1.webp    1x,
+                      ./images/team-desktop1@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp" />
+                  <source
+                    srcset="
+                      ./images/team-desktop1.jpg    1x,
+                      ./images/team-desktop1@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+
+                  <source
+                    srcset="
+                      ./images/team-tablet1.webp    1x,
+                      ./images/team-tablet1@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp" />
+                  <source
+                    srcset="
+                      ./images/team-tablet1.jpg    1x,
+                      ./images/team-tablet1@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)" />
+
+                  <source
+                    srcset="
+                      ./images/team-mobile1.webp    1x,
+                      ./images/team-mobile1@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp" />
+                  <source
+                    srcset="
+                      ./images/team-mobile1.jpg    1x,
+                      ./images/team-mobile1@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)" />
+
+                  <img
+                    src="./images/team-mobile1.jpg"
+                    alt="чоловік у коричневій сорочці"
+                    class="team-img" />
+                </picture>
               </div>
               <div class="team-member__meta">
                 <h3 class="team-member__name">Ігор Дем'яненко</h3>
