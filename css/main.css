@@ -83,19 +83,28 @@ body {
   background-color: var(--main-color);
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .modal-open-btn {
   font-weight: 700;
   font-size: 16px;
@@ -130,106 +139,6 @@ body {
 
 .footer-section__logo {
   color: var(--main-color);
-}
-
-.page-navigation__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
-}
-
-.page-navigation {
-  display: flex;
-  align-items: center;
-}
-
-.menu {
-  display: flex;
-  column-gap: 50px;
-}
-
-.menu .link.current {
-  color: var(--accent-color);
-}
-
-.menu__link {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition: color var(--transition-dur-and-func);
-  position: relative;
-}
-
-.menu__link:hover,
-.menu__link:focus {
-  color: var(--accent-color);
-}
-
-.current::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-}
-
-.page-header {
-  border-bottom: 1px solid #ececec;
-}
-
-.page-header-container {
-  display: flex;
-  align-items: center;
-}
-
-.contact-mail,
-.contact-tel {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.1428571429;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
-  fill: currentColor;
-  transition: color var(--transition-dur-and-func);
-}
-.contact-mail:hover, .contact-mail:focus,
-.contact-tel:hover,
-.contact-tel:focus {
-  color: var(--accent-color);
-}
-
-.contact {
-  display: flex;
-  margin-left: auto;
-  column-gap: 30px;
-}
-
-.contact-mail__icon {
-  margin-right: 10px;
-  fill: var(--secondary-text-color);
-  transition: fill var(--transition-dur-and-func);
-}
-.contact-mail:hover .contact-mail__icon, .contact-mail:focus .contact-mail__icon {
-  fill: var(--accent-color);
-}
-
-.contact-tel__icon {
-  margin-right: 10px;
-  fill: var(--secondary-text-color);
-  transition: fill var(--transition-dur-and-func);
-}
-.contact-tel:hover .contact-tel__icon, .contact-tel:focus .contact-tel__icon {
-  fill: var(--accent-color);
 }
 
 .backdrop {
@@ -497,6 +406,40 @@ screen
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .open-mobile-menu-btn {
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .open-mobile-menu-btn__icon {
+    width: 24px;
+    height: 16px;
+  }
+  .page-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact {
+    display: none;
+  }
+  .page-header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .open-mobile-menu-btn {
+    display: none;
+  }
+}
 .advantages-section {
   padding-top: 94px;
 }
